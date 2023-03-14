@@ -3,9 +3,9 @@ import people.Person;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class PersonTests {
+public class PersonTest {
     @Test
-    public void constructorTest()
+    public void testConstructor()
     {
         Person testMe = new Person("Joe", "Smith");
 
