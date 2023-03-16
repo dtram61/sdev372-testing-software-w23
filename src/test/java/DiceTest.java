@@ -7,6 +7,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import org.junit.jupiter.api.Assertions;
 
 public class DiceTest {
 
@@ -45,8 +46,15 @@ public class DiceTest {
             totalFrequencyOfRoll[i] = dice.roll();
             assertTrue(totalFrequencyOfRoll[i] >= 1 && totalFrequencyOfRoll[i] <=6);
         }
-//testing again
+
 
 
     }
+
+    @Test
+    public void testFail()
+    {
+        Assertions.fail("The test has failed");
+    }
+
 }
