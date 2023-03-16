@@ -51,10 +51,6 @@ public class DiceTest {
 
     }
 
-    @Test
-    public void testFail()
-    {
-        Assertions.fail("The test has failed");
-    }
+
 
 }
