@@ -37,10 +37,10 @@ public class DiceTest {
     }
 
     @Test
-    public void testRollFrequency()
+    public void testRolly()
     {
         Dice dice = new Dice(6, "red");
-        int frequency = 5;
+        int frequency = 1;
         int[] totalFrequencyOfRoll = new int[frequency];
         for (int i = 0; i < frequency ; i++) {
             totalFrequencyOfRoll[i] = dice.roll();
@@ -49,6 +49,21 @@ public class DiceTest {
 
 
 
+    }
+
+    @Test
+    public void testRollMany()
+    {
+        Dice dice = new Dice(6, "white");
+        int frequency = 5;
+
+        int [] rollIntoArrayList = dice.rollMany(frequency);
+
+        assertEquals(frequency, rollIntoArrayList.length);
+        for (int i = 0; i < rollIntoArrayList.length; i++) {
+            assertTrue(rollIntoArrayList[i] >= 1 && rollIntoArrayList[i] <= 6);
+
+        }
     }
 
 
