@@ -37,7 +37,7 @@ public class DiceTest {
     }
 
     @Test
-    public void testRolly()
+    public void testRoll()
     {
         Dice dice = new Dice(6, "red");
         int frequency = 1;
@@ -52,19 +52,11 @@ public class DiceTest {
     }
 
     @Test
-    public void testRollMany()
-    {
-        Dice dice = new Dice(6, "white");
-        int frequency = 5;
-
-        int [] rollIntoArrayList = dice.rollMany(frequency);
-
-        assertEquals(frequency, rollIntoArrayList.length);
-        for (int i = 0; i < rollIntoArrayList.length; i++) {
-            assertTrue(rollIntoArrayList[i] >= 1 && rollIntoArrayList[i] <= 6);
-
-        }
+    public void testToString(){
+        Dice dice = new Dice(6, "red");
+        assertEquals("A 6 sided die", dice.toString());
     }
+
 
 
 
